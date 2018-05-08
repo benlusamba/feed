@@ -8,7 +8,7 @@ import urllib.request, json, simplejson, csv, requests
 # define parameters, including API KEY
 params = (
     ('sources', 'the-new-york-times,the-washington-post,the-wall-street-journal,bbc-news,cnn'),
-    ('apiKey', 'e76a07388cad49b49075abced2862f3d'),
+    ('apiKey', 'YOUR_API_KEY'),
 )
 
 response = requests.get('https://newsapi.org/v2/top-headlines', params=params)
