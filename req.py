@@ -1,4 +1,4 @@
-# Automated news retrieval using news api
+# Automated news retrieval using newsapi.org (or other API of your choosing)
 # Skipping need for a "curl" request
 
 import pandas as pd
@@ -8,7 +8,7 @@ import urllib.request, json, simplejson, csv, requests
 # define parameters, including API KEY
 params = (
     ('sources', 'the-new-york-times,the-washington-post,the-wall-street-journal,bbc-news,cnn'),
-    ('apiKey', 'YOUR_API_KEY'),
+    ('apiKey', 'YOU_API_KEY'),
 )
 
 response = requests.get('https://newsapi.org/v2/top-headlines', params=params)
