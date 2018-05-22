@@ -1,27 +1,11 @@
-#import pandas as pd
-#import numpy as np
-#import urllib.request, json, simplejson, csv, requests
+# Instances of speficic words in text
+import re
 
-#fname = input('Enter the file name: ')
-#try:
-fhand = open('feed.csv')
-#except:
-#    print('File cannot be opened:', fname)
-#    exit()
-
-counts = dict()
-for line in fhand:
-    words = line.split()
-    for word in words:
-        if word not in counts:
-            counts[word] = 1
-        else:
-            counts[word] += 1
-
-print(counts)
-
-lst = list(counts.keys())
-print(lst)
-lst.sort()
-for key in lst:
-    print(key, counts[key])
+feed = open('feed.csv')
+for line in feed:
+    line = line.rstrip()
+    x = re.findall("Trump", line)
+    y = re.findall("China", line)
+    if len(x) > 0 and \
+    len(y) > 0:
+        print(x,y)
