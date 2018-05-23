@@ -5,11 +5,12 @@ import pandas as pd
 import numpy as np
 import urllib.request, json, simplejson, csv, requests
 
+import os
 
 # define parameters, including API KEY
 params = (
     ('sources', 'the-new-york-times,the-washington-post,the-wall-street-journal,bbc-news,cnn'),
-    ('apiKey', 'API_KEY),
+    ('apiKey', 'API_KEY'),
 )
 
 response = requests.get('https://newsapi.org/v2/top-headlines', params=params)
@@ -27,10 +28,12 @@ data = pd.read_json('data.json', lines=True)
 df_json_raw = pd.read_json('data.json')
 
 # Add variables as desired e.g. 'source'
-df_json = df_json_raw.apply( lambda x: pd.Series([x[0]['title'],x[0]['description'],x[0]['publishedAt'],x[0]['source']]), axis = 1 )
+#df_json = df_json_raw.apply( lambda x: pd.Series([x[0]['title'],x[0]['description'],x[0]['publishedAt'],x[0]['source']]), axis = 1 )
+df_json = df_json_raw.apply( lambda x: pd.Series([x[0]['title'],x[0]['description']]), axis = 1 )
 
- # Label columns for csv file
-df_json.columns=['Title','Description','Published At','Source']
+# Label columns for csv file
+#df_json.columns=['Title','Description','Published At','Source']
+df_json.columns=['Title','Description']
 
 #export as csv
 df_json.to_csv('feed.csv')
@@ -39,21 +42,7 @@ df_json.to_csv('feed.csv')
 print(data)
 print(df_json)
 
-fhand = open('feed.csv')
+print('')
 
-counts = dict()
-for line in fhand:
-    words = line.split()
-    for word in words:
-        if word not in counts:
-            counts[word] = 1
-        else:
-            counts[word] += 1
-
-print(counts)
-
-lst = list(counts.keys())
-print(lst)
-lst.sort()
-for key in lst:
-    print(key, counts[key])
+print('Word Frequency Count')
+import common
