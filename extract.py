@@ -2,8 +2,8 @@
 
 import re
 
-hand = open('feed.csv')
-for line in hand:
+file = open('feed.csv')
+for line in file:
     line = line.rstrip()
     if re.search('Donald Trump', line):
         print(line)
