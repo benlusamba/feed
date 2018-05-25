@@ -10,7 +10,7 @@ import os
 # define parameters, including API KEY
 params = (
     ('sources', 'the-new-york-times,the-washington-post,the-wall-street-journal,bbc-news,cnn'),
-    ('apiKey', 'API_KEY'),
+    ('apiKey', 'API_KEY),
 )
 
 response = requests.get('https://newsapi.org/v2/top-headlines', params=params)
