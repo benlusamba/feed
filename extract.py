@@ -5,5 +5,5 @@ import re
 file = open('feed.csv')
 for line in file:
     line = line.rstrip()
-    if re.search('Donald Trump', line):
+    if re.search('Trump', line):
         print(line)

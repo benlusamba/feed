@@ -1,5 +1,4 @@
 #Regex Search Engine within file:
-
 import re
 
 stuff = input('What should I search for: ')
