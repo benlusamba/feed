@@ -3,9 +3,12 @@
 
 import pandas as pd
 import numpy as np
-import urllib.request, json, simplejson, csv, requests
-
+import urllib.request
 import os
+import csv
+import requests
+import json
+import json as simplejson
 
 # define parameters, including API KEY
 params = (
@@ -29,11 +32,13 @@ df_json_raw = pd.read_json('data.json')
 
 # Add variables as desired e.g. 'source'
 #df_json = df_json_raw.apply( lambda x: pd.Series([x[0]['title'],x[0]['description'],x[0]['publishedAt'],x[0]['source']]), axis = 1 )
-df_json = df_json_raw.apply( lambda x: pd.Series([x[0]['title'],x[0]['description']]), axis = 1 )
+#df_json = df_json_raw.apply( lambda x: pd.Series([x[0]['title'],x[0]['description']]), axis = 1 )
+
+df_json = df_json_raw.apply( lambda x: pd.Series([x[2]['description'],x[2]['title']]), axis = 1)
 
 # Label columns for csv file
 #df_json.columns=['Title','Description','Published At','Source']
-df_json.columns=['Title','Description']
+df_json.columns=['Description', 'Title']
 
 #export as csv
 df_json.to_csv('feed.csv')
