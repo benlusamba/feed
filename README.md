@@ -8,5 +8,5 @@ Repository Components:
 2. Text Sourcing Script: <a href="https://github.com/benlusamba/feed/blob/master/req.py" target="_blank">req.py</a>
 3. Unstructured Data Cleaning
 4. Elementary Binary Search
-5. Machine Learning and Text Analytics
+5. Machine Learning and Natural Language Processing (NLP)
 
