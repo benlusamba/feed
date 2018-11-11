@@ -1,6 +1,6 @@
 # Feed Application
 
-This application leverages ```curl``` requests, media APIs, and regular expressions for NLP. The first layer of this application performs the unstructured data sourcing and cleaning. The seconde layer of this application - currently in development - employs natural language processing techniques for predictive work. Financial markets (FX, Equities, Fixed Income, Commodities) are of great interest in this project.
+This application leverages ```curl``` requests, media APIs, and regular expressions for NLP. The first layer of this application performs the unstructured data sourcing and cleaning. The second layer of this application - currently in development - employs natural language processing for predictive modelling. Financial markets (FX, Equities, Fixed Income, Commodities) are of interest in this project.
 
 **Repository Components**:
 
