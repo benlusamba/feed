@@ -9,6 +9,9 @@ import csv
 import requests
 import json
 import json as simplejson
+import datetime
+import os
+impor os.path
 
 # define parameters, including API KEY
 params = (
@@ -40,8 +43,13 @@ df_json = df_json_raw.apply( lambda x: pd.Series([x[2]['description'],x[2]['titl
 #df_json.columns=['Title','Description','Published At','Source']
 df_json.columns=['Description', 'Title']
 
-#export as csv
-df_json.to_csv('feed.csv')
+#export as csv, respect location and time conventions:
+datestring = datetime.strftime(datetime.now(), '%Y-%m-%d-%H-%M-%S')
+
+#df_json.to_csv('feed.csv')
+path = 'C:....feed\'
+df_json.to_csv(os.path.join(path,r'feed_'+datestring+'.csv'))
+
 
 # Show file in workspace
 print(data)
