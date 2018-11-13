@@ -11,7 +11,7 @@ import json
 import json as simplejson
 import datetime
 import os
-impor os.path
+import os.path
 
 # define parameters, including API KEY
 params = (
