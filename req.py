@@ -46,9 +46,9 @@ df_json.columns=['Description', 'Title']
 #export as csv, respect location and time conventions:
 datestring = datetime.strftime(datetime.now(), '%Y-%m-%d-%H-%M-%S')
 
-#df_json.to_csv('feed.csv')
-path = 'C:....feed\'
-df_json.to_csv(os.path.join(path,r'feed_'+datestring+'.csv'))
+df_json.to_csv('C:/Users/BELUSA/Documents/Projects/alt/feed/feed.csv')
+#path = 'C:/Users/BELUSA/Documents/Projects/alt/feed'
+#df_json.to_csv(os.path.join(path,r'feed_'+datestring+'.csv'))
 
 
 # Show file in workspace
