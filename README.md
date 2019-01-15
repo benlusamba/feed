@@ -6,6 +6,6 @@ This application leverages ```curl``` requests, media APIs, and regular expressi
 
 1. Application Architecture (forthcoming) 
 2. Unstructured data sourcing script: <a href="https://github.com/benlusamba/feed/blob/master/req.py" target="_blank">req.py</a>
-3. Pre-processing of unstructured data
+3. Pre-processing of unstructured data sources
 4. Text Search
 5. Machine Learning and Natural Language Processing (NLP)
