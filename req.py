@@ -1,4 +1,4 @@
-# Automated news retrieval using newsapi.org (or other API of your choosing)
+### Automated news retrieval using newsapi.org (or other API of your choosing)
 # Obviating need for a "curl" request
 
 import pandas as pd
