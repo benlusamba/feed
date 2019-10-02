@@ -1,5 +1,4 @@
-### Automated news retrieval using newsapi.org (or other API of your choosing)
-# Obviating need for a "curl" request
+""" Extract File Generation """
 
 import pandas as pd
 import numpy as np
